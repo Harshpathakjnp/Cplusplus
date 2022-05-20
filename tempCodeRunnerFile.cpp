@@ -1,7 +1,4 @@
-for(i=0;i<=l;i++)
-    // {
-    //     if(s[i]==32)
-    //     {
-    //         a=i;
-    //     }
-    // }
+a1.printall();
+    // s1.print();
+    // d1.print();
+    // c1.print();

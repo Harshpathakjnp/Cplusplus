@@ -1,41 +1,27 @@
-#include<iostream>
-#include<string.h>
+#include <iostream>
 using namespace std;
 int main()
 {
-    char string1[26]="crr", string2[20]="crd";
-    int lenth1, lenth2, i, j, found=0, notfound=0;
-    cout<<"Enter the First String: ";
-    //cin>>string1;
-    cout<<"Enter the Second String: ";
-    //cin>>string2;
-    lenth1 = strlen(string1);
-    lenth2 = strlen(string2);
-    if(lenth1 != lenth2)
+    
+   int a[]={1,2,3,4,7,6,11,3};
+   int size=sizeof(a)/sizeof(int);
+   int count=0,i;
+   int p1=0;
+   int p2;
+   int maxlength=-1;
+   
+    for(i=0;i<=size-2;i++)
     {
-        cout<<"\nThey are not anagrams  ";
-          return 0;
+        
+        if(a[i]>=a[i+1])
+        {
+            p2=i+1;
+            cout<<p1<<","<<p2-1<<endl;
+            p1=p2;
+        }
+        //cout<<a[i]<<","<<a[i+1]<<",";
+        
     }
-    int f[26]={0};
-    for(int i=0;i<=lenth1-1;i++)
-    {
-        char ch=string1[i];
-        int pos=ch-'a';
-        f[pos]++;
-    }
-       for(int i=0;i<=lenth2-1;i++)
-    {
-        char ch=string2[i];
-        int pos=ch-'a';
-        f[pos]--;
-    }
-    for(int i=0;i<=25;i++)
-    if(f[i]!=0)
-    {
-    cout<<"Not"<<endl;
-    return 0;
-    }
-
-        cout<<"Yes"<<endl;
-    return 0;
+   
+   return 0;
 }
